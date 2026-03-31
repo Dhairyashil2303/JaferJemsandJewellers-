@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jafar Gems & Jewellers — Miraj</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo/jafar-logo.png" alt="Jafar Jewellers" class="nav-logo">
+      <div class="nav-brand-text">
+        <span class="brand-main">Jafar Gems</span>
+        <span class="brand-sub">& Jewellers</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="products.html" class="nav-link">Collection</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li>
+        <a href="wishlist.html" class="nav-icon" aria-label="Wishlist">
+          <i class="fa fa-heart"></i>
+          <span class="badge" id="wish-badge">0</span>
+        </a>
+      </li>
+      <li>
+        <a href="cart.html" class="nav-icon" aria-label="Cart">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="badge" id="cart-badge">0</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grain"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-lines"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge animate-up delay-1">Est. — Miraj, Maharashtra</div>
+    <h1 class="hero-title animate-up delay-2">
+      <span class="hero-title-line">Crafted for</span>
+      <span class="hero-title-line italic">Eternity</span>
+    </h1>
+    <p class="hero-desc animate-up delay-3">
+      Gold · Silver · Precious Gems<br>Handcrafted jewellery since generations
+    </p>
+    <div class="hero-actions animate-up delay-4">
+      <a href="products.html" class="btn-primary">Explore Collection</a>
+      <a href="contact.html" class="btn-ghost">Visit Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll animate-up delay-5">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Collections</span>
+      <h2 class="section-title">Fine Jewellery</h2>
+    </div>
+    <div class="cat-grid">
+      <a href="products.html?cat=gold" class="cat-card cat-gold">
+        <div class="cat-img-wrap">
+          <img src="images/gold/gold1.jpeg" alt="Gold Jewellery">
+          <div class="cat-overlay"></div>
+        </div>
+        <div class="cat-info">
+          <span class="cat-name">Gold</span>
+          <span class="cat-count">3 pieces</span>
+          <i class="fa fa-arrow-right cat-arrow"></i>
+        </div>
+      </a>
+      <a href="products.html?cat=silver" class="cat-card cat-silver">
+        <div class="cat-img-wrap">
+          <img src="images/silver/silver1.jpg" alt="Silver Jewellery">
+          <div class="cat-overlay"></div>
+        </div>
+        <div class="cat-info">
+          <span class="cat-name">Silver</span>
+          <span class="cat-count">3 pieces</span>
+          <i class="fa fa-arrow-right cat-arrow"></i>
+        </div>
+      </a>
+      <a href="products.html?cat=gems" class="cat-card cat-gems">
+        <div class="cat-img-wrap">
+          <img src="images/gems/gem1.jpg" alt="Precious Gems">
+          <div class="cat-overlay"></div>
+        </div>
+        <div class="cat-info">
+          <span class="cat-name">Gems</span>
+          <span class="cat-count">3 pieces</span>
+          <i class="fa fa-arrow-right cat-arrow"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="featured section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Handpicked</span>
+      <h2 class="section-title">Featured Pieces</h2>
+    </div>
+    <div id="cart-toast" class="toast"></div>
+    <div class="products-grid">
+
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <img src="images/gold/gold1.jpeg" alt="Gold Ring" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Gold Ring" data-price="25000" aria-label="Add to wishlist">
+            <i class="fa fa-heart"></i>
+          </button>
+          <div class="product-badge">Gold</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Gold Ring</h3>
+          <div class="product-footer">
+            <span class="product-price">₹25,000</span>
+            <button class="btn-cart add-cart" data-name="Gold Ring" data-price="25000">
+              <i class="fa fa-shopping-bag"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <img src="images/silver/silver1.jpg" alt="Silver Necklace" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Silver Necklace" data-price="7000" aria-label="Add to wishlist">
+            <i class="fa fa-heart"></i>
+          </button>
+          <div class="product-badge">Silver</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Silver Necklace</h3>
+          <div class="product-footer">
+            <span class="product-price">₹7,000</span>
+            <button class="btn-cart add-cart" data-name="Silver Necklace" data-price="7000">
+              <i class="fa fa-shopping-bag"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-img-wrap">
+          <img src="images/gems/gem1.jpg" alt="Ruby Gemstone" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Ruby Gemstone" data-price="12000" aria-label="Add to wishlist">
+            <i class="fa fa-heart"></i>
+          </button>
+          <div class="product-badge">Gem</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Ruby Gemstone</h3>
+          <div class="product-footer">
+            <span class="product-price">₹12,000</span>
+            <button class="btn-cart add-cart" data-name="Ruby Gemstone" data-price="12000">
+              <i class="fa fa-shopping-bag"></i> Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="section-cta">
+      <a href="products.html" class="btn-primary">View All Pieces</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-left reveal">
+        <span class="section-label">Our Promise</span>
+        <h2 class="section-title">Why Jafar<br><em>Gems?</em></h2>
+        <p class="why-desc">Generations of trust, certified quality, and a passion for crafting jewellery that lasts a lifetime.</p>
+        <a href="contact.html" class="btn-primary">Get in Touch</a>
+      </div>
+      <div class="why-right">
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fa fa-certificate"></i></div>
+          <div>
+            <h4>Certified Jewellery</h4>
+            <p>All our pieces come with quality certification and authentic hallmarks.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fa fa-handshake"></i></div>
+          <div>
+            <h4>Trusted Since Years</h4>
+            <p>A legacy of trust built with thousands of satisfied customers in Miraj.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fa fa-tag"></i></div>
+          <div>
+            <h4>Best Prices</h4>
+            <p>Premium quality jewellery at fair and transparent pricing — always.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fa fa-gem"></i></div>
+          <div>
+            <h4>Custom Jewellery</h4>
+            <p>Design your dream piece with our skilled artisans. Made just for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Happy Customers</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Certified Products</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Collections</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">WhatsApp Support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo/jafar-logo.png" alt="Jafar Jewellers" class="footer-logo">
+        <p class="footer-tagline">Jafar Gems & Jewellers</p>
+        <p class="footer-address">Darda Road, Infront of Seva Mandap,<br>Miraj — 416410, Maharashtra</p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Collection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Get In Touch</h5>
+        <a href="tel:+919370431575" class="footer-cta">
+          <i class="fa fa-phone"></i> +91 93704 31575
+        </a>
+        <a href="https://wa.me/919370431575" target="_blank" class="footer-cta whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Jafar Gems & Jewellers. All rights reserved.</p>
+      <a href="admin/login.html" class="admin-link"><i class="fa fa-user-shield"></i> Admin</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/919370431575" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>

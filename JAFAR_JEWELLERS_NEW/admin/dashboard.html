@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h3 class="logo">Jafar Admin</h3>
+
+<a href="dashboard.html">
+<i class="fa fa-chart-line"></i> Dashboard
+</a>
+
+<a href="add-product.html">
+<i class="fa fa-plus-circle"></i> Add Product
+</a>
+
+<a href="manage-products.html">
+<i class="fa fa-box"></i> Manage Products
+</a>
+
+<a href="../products.html">
+<i class="fa fa-globe"></i> View Website
+</a>
+
+<button class="logout-btn" onclick="logout()">
+<i class="fa fa-sign-out-alt"></i> Logout
+</button>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+<h2 class="mb-4">Admin Dashboard</h2>
+
+<!-- STATISTICS -->
+
+<div class="row g-4 mb-5">
+
+<div class="col-md-3">
+<div class="stat-card products">
+<h3 id="total-products">0</h3>
+<p>Total Products</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-card cart">
+<h3 id="cart-items">0</h3>
+<p>Items in Cart</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-card wishlist">
+<h3 id="wishlist-items">0</h3>
+<p>Wishlist Items</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="stat-card orders">
+<h3 id="orders">0</h3>
+<p>Estimated Orders</p>
+</div>
+</div>
+
+</div>
+
+<!-- PRODUCT MANAGEMENT -->
+
+<h4 class="mb-3">Update Product Prices</h4>
+
+<table class="table table-bordered">
+
+<thead class="table-dark">
+
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Category</th>
+<th>Update Price</th>
+</tr>
+
+</thead>
+
+<tbody id="product-table">
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+    function loadStats(){
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+document.getElementById("total-products").innerText = products.length;
+document.getElementById("cart-items").innerText = cart.length;
+document.getElementById("wishlist-items").innerText = wishlist.length;
+document.getElementById("orders").innerText = cart.length;
+
+}
+
+function loadProducts(){
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+let table = document.getElementById("product-table");
+
+table.innerHTML = "";
+
+products.forEach((product,index)=>{
+
+table.innerHTML += `
+
+<tr>
+
+<td>${product.name}</td>
+<td>₹${product.price}</td>
+<td>${product.category}</td>
+
+<td>
+
+<input type="number" id="price-${index}" class="form-control mb-2" placeholder="New Price">
+
+<button class="btn btn-success btn-sm" onclick="updatePrice(${index})">
+Update
+</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+}
+
+function updatePrice(index){
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+let newPrice = document.getElementById("price-"+index).value;
+
+if(newPrice !== ""){
+
+products[index].price = newPrice;
+
+localStorage.setItem("products",JSON.stringify(products));
+
+loadProducts();
+
+alert("Price Updated");
+
+}
+
+}
+
+function logout(){
+
+window.location.href="login.html";
+
+}
+
+loadStats();
+loadProducts();
+</script>
+
+
+</body>
+</html>

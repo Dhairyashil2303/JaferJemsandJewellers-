@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection | Jafar Gems & Jewellers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo/jafar-logo.png" alt="Jafar Jewellers" class="nav-logo">
+      <div class="nav-brand-text">
+        <span class="brand-main">Jafar Gems</span>
+        <span class="brand-sub">& Jewellers</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link active">Collection</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="wishlist.html" class="nav-icon" aria-label="Wishlist"><i class="fa fa-heart"></i><span class="badge" id="wish-badge">0</span></a></li>
+      <li><a href="cart.html" class="nav-icon" aria-label="Cart"><i class="fa fa-shopping-bag"></i><span class="badge" id="cart-badge">0</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <span class="section-label">Handcrafted</span>
+  <h1 class="section-title" style="font-size:clamp(2.2rem,6vw,4rem)">Our Collection</h1>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="container">
+    <div class="filter-wrap">
+      <span class="filter-label">Filter by</span>
+      <button class="filter-btn active" data-filter="all">All Pieces</button>
+      <button class="filter-btn" data-filter="gold">Gold</button>
+      <button class="filter-btn" data-filter="silver">Silver</button>
+      <button class="filter-btn" data-filter="gems">Gems</button>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS GRID -->
+<section class="products-page-section">
+  <div class="container">
+    <div id="cart-toast" class="toast"></div>
+    <div class="products-grid" id="product-container">
+
+      <!-- GOLD -->
+      <div class="product-card reveal product-item" data-category="gold">
+        <div class="product-img-wrap">
+          <img src="images/gold/gold1.jpeg" alt="Gold Ring" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Gold Ring" data-price="25000" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Gold</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Gold Ring</h3>
+          <div class="product-footer">
+            <span class="product-price">₹25,000</span>
+            <button class="btn-cart add-cart" data-name="Gold Ring" data-price="25000"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal product-item" data-category="gold">
+        <div class="product-img-wrap">
+          <img src="images/gold/gold2.png" alt="Gold Necklace" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Gold Necklace" data-price="48000" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Gold</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Gold Necklace</h3>
+          <div class="product-footer">
+            <span class="product-price">₹48,000</span>
+            <button class="btn-cart add-cart" data-name="Gold Necklace" data-price="48000"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal product-item" data-category="gold">
+        <div class="product-img-wrap">
+          <img src="images/gold/gold3.jpg" alt="Gold Bangles" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Gold Bangles" data-price="35000" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Gold</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Gold Bangles</h3>
+          <div class="product-footer">
+            <span class="product-price">₹35,000</span>
+            <button class="btn-cart add-cart" data-name="Gold Bangles" data-price="35000"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SILVER -->
+      <div class="product-card reveal product-item" data-category="silver">
+        <div class="product-img-wrap">
+          <img src="images/silver/silver1.jpg" alt="Silver Necklace" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Silver Necklace" data-price="7000" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Silver</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Silver Necklace</h3>
+          <div class="product-footer">
+            <span class="product-price">₹7,000</span>
+            <button class="btn-cart add-cart" data-name="Silver Necklace" data-price="7000"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal product-item" data-category="silver">
+        <div class="product-img-wrap">
+          <img src="images/silver/silver2.jpg" alt="Silver Bracelet" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Silver Bracelet" data-price="5000" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Silver</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Silver Bracelet</h3>
+          <div class="product-footer">
+            <span class="product-price">₹5,000</span>
+            <button class="btn-cart add-cart" data-name="Silver Bracelet" data-price="5000"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal product-item" data-category="silver">
+        <div class="product-img-wrap">
+          <img src="images/silver/silver3.jpg" alt="Silver Earrings" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Silver Earrings" data-price="3500" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Silver</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Silver Earrings</h3>
+          <div class="product-footer">
+            <span class="product-price">₹3,500</span>
+            <button class="btn-cart add-cart" data-name="Silver Earrings" data-price="3500"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- GEMS -->
+      <div class="product-card reveal product-item" data-category="gems">
+        <div class="product-img-wrap">
+          <img src="images/gems/gem1.jpg" alt="Ruby Gemstone" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Ruby Gemstone" data-price="12000" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Gem</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Ruby Gemstone</h3>
+          <div class="product-footer">
+            <span class="product-price">₹12,000</span>
+            <button class="btn-cart add-cart" data-name="Ruby Gemstone" data-price="12000"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal product-item" data-category="gems">
+        <div class="product-img-wrap">
+          <img src="images/gems/gem2.jpg" alt="Emerald Gemstone" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Emerald Gemstone" data-price="18000" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Gem</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Emerald Gemstone</h3>
+          <div class="product-footer">
+            <span class="product-price">₹18,000</span>
+            <button class="btn-cart add-cart" data-name="Emerald Gemstone" data-price="18000"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal product-item" data-category="gems">
+        <div class="product-img-wrap">
+          <img src="images/gems/gem3.jpg" alt="Sapphire Gemstone" loading="lazy">
+          <button class="btn-wish wishlist" data-name="Sapphire Gemstone" data-price="22000" aria-label="Wishlist"><i class="fa fa-heart"></i></button>
+          <div class="product-badge">Gem</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Sapphire Gemstone</h3>
+          <div class="product-footer">
+            <span class="product-price">₹22,000</span>
+            <button class="btn-cart add-cart" data-name="Sapphire Gemstone" data-price="22000"><i class="fa fa-shopping-bag"></i> Add</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo/jafar-logo.png" alt="Jafar Jewellers" class="footer-logo">
+        <p class="footer-tagline">Jafar Gems & Jewellers</p>
+        <p class="footer-address">Darda Road, Infront of Seva Mandap,<br>Miraj — 416410, Maharashtra</p>
+      </div>
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Collection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h5>Get In Touch</h5>
+        <a href="tel:+919370431575" class="footer-cta"><i class="fa fa-phone"></i> +91 93704 31575</a>
+        <a href="https://wa.me/919370431575" target="_blank" class="footer-cta whatsapp"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Jafar Gems & Jewellers. All rights reserved.</p>
+      <a href="admin/login.html" class="admin-link"><i class="fa fa-user-shield"></i> Admin</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919370431575" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>

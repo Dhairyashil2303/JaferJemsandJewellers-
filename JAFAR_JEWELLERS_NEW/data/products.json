@@ -1,0 +1,41 @@
+[
+{
+"id":1,
+"name":"Gold Ring",
+"price":25000,
+"category":"gold",
+"image":"images/products/placeholder.jpg"
+},
+
+{
+"id":2,
+"name":"Silver Necklace",
+"price":7000,
+"category":"silver",
+"image":"images/products/placeholder.jpg"
+},
+
+{
+"id":3,
+"name":"Ruby Gemstone",
+"price":12000,
+"category":"gems",
+"image":"images/products/placeholder.jpg"
+},
+
+{
+"id":4,
+"name":"Gold Chain",
+"price":32000,
+"category":"gold",
+"image":"images/products/placeholder.jpg"
+},
+
+{
+"id":5,
+"name":"Silver Bracelet",
+"price":5000,
+"category":"silver",
+"image":"images/products/placeholder.jpg"
+}
+]

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Jafar Gems & Jewellers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo/jafar-logo.png" alt="Jafar Jewellers" class="nav-logo">
+      <div class="nav-brand-text">
+        <span class="brand-main">Jafar Gems</span>
+        <span class="brand-sub">& Jewellers</span>
+      </div>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link">Collection</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      <li><a href="wishlist.html" class="nav-icon"><i class="fa fa-heart"></i><span class="badge" id="wish-badge">0</span></a></li>
+      <li><a href="cart.html" class="nav-icon"><i class="fa fa-shopping-bag"></i><span class="badge" id="cart-badge">0</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="contact-page">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <span class="section-label">Find Us</span>
+        <h2 class="section-title">Get In<br><em>Touch</em></h2>
+        <p>Visit our store in Miraj or reach us anytime on WhatsApp. We'd love to help you find the perfect piece.</p>
+
+        <div class="contact-detail">
+          <i class="fa fa-map-marker-alt"></i>
+          <div>
+            <h4>Address</h4>
+            <p>Darda Road, Infront of Seva Mandap,<br>Miraj — 416410, Maharashtra</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa fa-phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+919370431575" style="color:var(--ink)">+91 93704 31575</a></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div>
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/919370431575" target="_blank" style="color:var(--gold)">Chat with us directly</a></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa fa-clock"></i>
+          <div>
+            <h4>Store Hours</h4>
+            <p>Mon – Sat: 10:00 AM – 8:00 PM<br>Sunday: 11:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3 style="font-family:var(--font-display);font-size:1.8rem;margin-bottom:8px">Send a Message</h3>
+        <p style="color:var(--ink-light);font-size:0.9rem;margin-bottom:28px">We'll get back to you within 24 hours.</p>
+
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" class="form-control" placeholder="Rahul Sharma" id="contact-name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" class="form-control" placeholder="+91 98765 43210" id="contact-phone">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea class="form-control" rows="4" placeholder="I'm interested in custom jewellery..." id="contact-msg" style="resize:vertical"></textarea>
+        </div>
+        <button class="btn-primary" onclick="sendWhatsApp()" style="width:100%;justify-content:center;border-radius:12px;padding:16px;margin-top:8px">
+          <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/919370431575" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script src="js/script.js"></script>
+<script>
+function sendWhatsApp() {
+  const name = document.getElementById('contact-name').value.trim() || 'Customer';
+  const phone = document.getElementById('contact-phone').value.trim();
+  const msg = document.getElementById('contact-msg').value.trim();
+  if (!msg) { alert('Please enter a message.'); return; }
+  const text = `Hello! My name is ${name}${phone ? ' (' + phone + ')' : ''}.%0A%0A${encodeURIComponent(msg)}`;
+  window.open('https://wa.me/919370431575?text=' + text, '_blank');
+}
+</script>
+</body>
+</html>
